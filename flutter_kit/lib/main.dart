@@ -7,6 +7,7 @@ import 'package:get/get_navigation/src/router_report.dart';
 import 'config/route_config.dart';
 
 void main() async {
+  // 持久化存储初始化
   WidgetsFlutterBinding.ensureInitialized();
   await SPStorage.getInstance();
   runApp(const MyApp());
