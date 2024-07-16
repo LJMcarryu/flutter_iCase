@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_kit/controller/user_controller/user_controller_logic.dart';
 import 'package:flutter_kit/database/shared_preferences.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -10,6 +11,7 @@ void main() async {
   // 持久化存储初始化
   WidgetsFlutterBinding.ensureInitialized();
   await SPStorage.getInstance();
+  Get.put(UserControllerLogic());
   runApp(const MyApp());
 }
 

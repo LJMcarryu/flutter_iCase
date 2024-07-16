@@ -4,8 +4,8 @@ part 'user_info.freezed.dart';
 part 'user_info.g.dart';
 
 @freezed
-class userInfo with _$userInfo {
-  const factory userInfo({
+class UserInfo with _$UserInfo {
+  const factory UserInfo({
     String? token,
     String? nickName,
     List<String>? deviceCodes,
@@ -14,8 +14,8 @@ class userInfo with _$userInfo {
     int? isAlive,
     int? isExternal,
     int? needCard,
-  }) = _userInfo;
+  }) = _UserInfo;
 
-  factory userInfo.fromJson(Map<String, Object?> json) =>
-      _$userInfoFromJson(json);
+  factory UserInfo.fromJson(Map<String, Object?> json) =>
+      _$UserInfoFromJson(json);
 }

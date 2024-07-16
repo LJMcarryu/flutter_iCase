@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-userInfo _$userInfoFromJson(Map<String, dynamic> json) {
-  return _userInfo.fromJson(json);
+UserInfo _$UserInfoFromJson(Map<String, dynamic> json) {
+  return _UserInfo.fromJson(json);
 }
 
 /// @nodoc
-mixin _$userInfo {
+mixin _$UserInfo {
   String? get token => throw _privateConstructorUsedError;
   String? get nickName => throw _privateConstructorUsedError;
   List<String>? get deviceCodes => throw _privateConstructorUsedError;
@@ -31,14 +31,14 @@ mixin _$userInfo {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $userInfoCopyWith<userInfo> get copyWith =>
+  $UserInfoCopyWith<UserInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $userInfoCopyWith<$Res> {
-  factory $userInfoCopyWith(userInfo value, $Res Function(userInfo) then) =
-      _$userInfoCopyWithImpl<$Res, userInfo>;
+abstract class $UserInfoCopyWith<$Res> {
+  factory $UserInfoCopyWith(UserInfo value, $Res Function(UserInfo) then) =
+      _$UserInfoCopyWithImpl<$Res, UserInfo>;
   @useResult
   $Res call(
       {String? token,
@@ -52,9 +52,9 @@ abstract class $userInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$userInfoCopyWithImpl<$Res, $Val extends userInfo>
-    implements $userInfoCopyWith<$Res> {
-  _$userInfoCopyWithImpl(this._value, this._then);
+class _$UserInfoCopyWithImpl<$Res, $Val extends UserInfo>
+    implements $UserInfoCopyWith<$Res> {
+  _$UserInfoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -111,11 +111,11 @@ class _$userInfoCopyWithImpl<$Res, $Val extends userInfo>
 }
 
 /// @nodoc
-abstract class _$$userInfoImplCopyWith<$Res>
-    implements $userInfoCopyWith<$Res> {
-  factory _$$userInfoImplCopyWith(
-          _$userInfoImpl value, $Res Function(_$userInfoImpl) then) =
-      __$$userInfoImplCopyWithImpl<$Res>;
+abstract class _$$UserInfoImplCopyWith<$Res>
+    implements $UserInfoCopyWith<$Res> {
+  factory _$$UserInfoImplCopyWith(
+          _$UserInfoImpl value, $Res Function(_$UserInfoImpl) then) =
+      __$$UserInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -130,11 +130,11 @@ abstract class _$$userInfoImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$userInfoImplCopyWithImpl<$Res>
-    extends _$userInfoCopyWithImpl<$Res, _$userInfoImpl>
-    implements _$$userInfoImplCopyWith<$Res> {
-  __$$userInfoImplCopyWithImpl(
-      _$userInfoImpl _value, $Res Function(_$userInfoImpl) _then)
+class __$$UserInfoImplCopyWithImpl<$Res>
+    extends _$UserInfoCopyWithImpl<$Res, _$UserInfoImpl>
+    implements _$$UserInfoImplCopyWith<$Res> {
+  __$$UserInfoImplCopyWithImpl(
+      _$UserInfoImpl _value, $Res Function(_$UserInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -149,7 +149,7 @@ class __$$userInfoImplCopyWithImpl<$Res>
     Object? isExternal = freezed,
     Object? needCard = freezed,
   }) {
-    return _then(_$userInfoImpl(
+    return _then(_$UserInfoImpl(
       token: freezed == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
@@ -188,8 +188,8 @@ class __$$userInfoImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$userInfoImpl with DiagnosticableTreeMixin implements _userInfo {
-  const _$userInfoImpl(
+class _$UserInfoImpl with DiagnosticableTreeMixin implements _UserInfo {
+  const _$UserInfoImpl(
       {this.token,
       this.nickName,
       final List<String>? deviceCodes,
@@ -200,8 +200,8 @@ class _$userInfoImpl with DiagnosticableTreeMixin implements _userInfo {
       this.needCard})
       : _deviceCodes = deviceCodes;
 
-  factory _$userInfoImpl.fromJson(Map<String, dynamic> json) =>
-      _$$userInfoImplFromJson(json);
+  factory _$UserInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserInfoImplFromJson(json);
 
   @override
   final String? token;
@@ -230,14 +230,14 @@ class _$userInfoImpl with DiagnosticableTreeMixin implements _userInfo {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'userInfo(token: $token, nickName: $nickName, deviceCodes: $deviceCodes, tenantId: $tenantId, expireTime: $expireTime, isAlive: $isAlive, isExternal: $isExternal, needCard: $needCard)';
+    return 'UserInfo(token: $token, nickName: $nickName, deviceCodes: $deviceCodes, tenantId: $tenantId, expireTime: $expireTime, isAlive: $isAlive, isExternal: $isExternal, needCard: $needCard)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'userInfo'))
+      ..add(DiagnosticsProperty('type', 'UserInfo'))
       ..add(DiagnosticsProperty('token', token))
       ..add(DiagnosticsProperty('nickName', nickName))
       ..add(DiagnosticsProperty('deviceCodes', deviceCodes))
@@ -252,7 +252,7 @@ class _$userInfoImpl with DiagnosticableTreeMixin implements _userInfo {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$userInfoImpl &&
+            other is _$UserInfoImpl &&
             (identical(other.token, token) || other.token == token) &&
             (identical(other.nickName, nickName) ||
                 other.nickName == nickName) &&
@@ -285,19 +285,19 @@ class _$userInfoImpl with DiagnosticableTreeMixin implements _userInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$userInfoImplCopyWith<_$userInfoImpl> get copyWith =>
-      __$$userInfoImplCopyWithImpl<_$userInfoImpl>(this, _$identity);
+  _$$UserInfoImplCopyWith<_$UserInfoImpl> get copyWith =>
+      __$$UserInfoImplCopyWithImpl<_$UserInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$userInfoImplToJson(
+    return _$$UserInfoImplToJson(
       this,
     );
   }
 }
 
-abstract class _userInfo implements userInfo {
-  const factory _userInfo(
+abstract class _UserInfo implements UserInfo {
+  const factory _UserInfo(
       {final String? token,
       final String? nickName,
       final List<String>? deviceCodes,
@@ -305,10 +305,10 @@ abstract class _userInfo implements userInfo {
       final int? expireTime,
       final int? isAlive,
       final int? isExternal,
-      final int? needCard}) = _$userInfoImpl;
+      final int? needCard}) = _$UserInfoImpl;
 
-  factory _userInfo.fromJson(Map<String, dynamic> json) =
-      _$userInfoImpl.fromJson;
+  factory _UserInfo.fromJson(Map<String, dynamic> json) =
+      _$UserInfoImpl.fromJson;
 
   @override
   String? get token;
@@ -328,6 +328,6 @@ abstract class _userInfo implements userInfo {
   int? get needCard;
   @override
   @JsonKey(ignore: true)
-  _$$userInfoImplCopyWith<_$userInfoImpl> get copyWith =>
+  _$$UserInfoImplCopyWith<_$UserInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
