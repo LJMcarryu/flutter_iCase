@@ -52,7 +52,7 @@ class SPStorage {
       try {
         // 反序列化，处理map，原样返回map回去。
         return const JsonDecoder().convert(value) as Map<String, dynamic>;
-      } on FormatException catch (e) {
+      } on FormatException catch (_) {
         return value; // 返回字符串
       }
     }

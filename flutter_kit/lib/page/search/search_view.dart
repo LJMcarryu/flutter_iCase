@@ -17,6 +17,8 @@ class SearchPage extends StatelessWidget {
     final UserControllerState userControllerState = userControllerLogic.state;
 
     return Scaffold(
-        body:Center(child:Obx(() => Text(userControllerState.userName.value.toString()))));
+        body: Center(
+            child: Obx(
+                () => Text(userControllerState.userName.value.toString()))));
   }
 }

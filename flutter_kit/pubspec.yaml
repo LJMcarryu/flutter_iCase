@@ -92,7 +92,7 @@ dependencies:
   # 添加闪光效果的简单方法
 #  shimmer: ^3.0.0
   # 包含一系列炫酷文本动画的 Flutter 包
-#  animated_text_kit: ^4.2.2
+  animated_text_kit: ^4.2.2
   # 精美的预建动画可以轻松集成到任何 Flutter 应用程序中
 #  animations: ^2.0.11
   # 每个动画都是一个可定制的小部件

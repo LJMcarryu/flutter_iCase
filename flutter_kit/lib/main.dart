@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           // title: 'flutter_kit',
           // theme: ThemeData(primarySwatch: Colors.blue),
-          initialRoute: RouteConfig.tab,
+          initialRoute: RouteConfig.flash,
           getPages: RouteConfig.getPages,
           // 此处是处理不使用 GetX 路由，也能很轻松回收各个页面的 GetXController
           navigatorObservers: [GetXRouterObserver()],
