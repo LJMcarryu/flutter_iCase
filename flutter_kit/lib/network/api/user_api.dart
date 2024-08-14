@@ -1,12 +1,14 @@
 import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
+import 'package:flutter_kit/config/constant_config.dart';
+import 'package:flutter_kit/model/user_info.dart';
 import 'package:flutter_kit/util/log_util.dart';
 
 import '../network.dart';
 
 /// 用户登录
-Future<WebRespBody?> userLogin(String username, String password) async {
+Future<UserInfo> userLogin(String username, String password) async {
   try {
     var digest = md5.convert(const Utf8Encoder().convert(password));
     // 参数
@@ -15,12 +17,12 @@ Future<WebRespBody?> userLogin(String username, String password) async {
       "password": digest.toString(),
       "userType": 1
     };
-    Log.d(query);
     var response =
-        await Network.apiDio.post("/icase/api/user/login", data: query);
-    var data = WebRespBody(response.data);
+        await Network.apiDio.post(ConstantConfig.userLogin, data: query);
+    var data = UserInfo.fromJson(WebRespBody(response.data).body);
     return data;
   } catch (e) {
-    return null;
+    /// TODO: 出错处理
+    return const UserInfo();
   }
 }

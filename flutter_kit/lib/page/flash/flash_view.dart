@@ -1,8 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_kit/config/route_config.dart';
-import 'package:flutter_kit/util/log_util.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'flash_logic.dart';
@@ -28,8 +25,6 @@ class FlashPage extends StatelessWidget {
     final FlashLogic logic = Get.find<FlashLogic>();
     final FlashState state = Get.find<FlashLogic>().state;
 
-    // return Container();
-
     return Scaffold(body: Center(
       child: SizedBox(
         width: 300,
@@ -43,7 +38,7 @@ class FlashPage extends StatelessWidget {
           ],
           isRepeatingAnimation: false,
           onFinished: () {
-            Get.offNamed(RouteConfig.tab);
+            logic.goLoginOrHome();
           },
           pause: const Duration(milliseconds: 0),
         ),

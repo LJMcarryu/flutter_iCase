@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_kit/config/route_config.dart';
+import 'package:flutter_kit/controller/user_controller/user_controller_logic.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +23,7 @@ class HomePage extends StatelessWidget {
           onTap: () {
             Get.toNamed(RouteConfig.search);
           },
-          child: const Text("home"),
+          child: Text(Get.find<UserControllerLogic>().state.userInfo.nickName ?? ""),
         ),
       ),
     );

@@ -69,6 +69,7 @@ dependencies:
   fluttertoast: ^8.2.6
   # 一款简洁轻量的 Flutter 加载/toast 小部件
   flutter_easyloading: ^3.0.5
+
   # 小型、易于使用且可扩展的记录器，可打印漂亮的日志
   logger: ^2.3.0
   # 高级的错误处理程序和记录器

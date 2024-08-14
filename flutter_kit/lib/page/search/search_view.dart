@@ -18,7 +18,6 @@ class SearchPage extends StatelessWidget {
 
     return Scaffold(
         body: Center(
-            child: Obx(
-                () => Text(userControllerState.userName.value.toString()))));
+            child: Text(userControllerState.userInfo.nickName ?? "")));
   }
 }

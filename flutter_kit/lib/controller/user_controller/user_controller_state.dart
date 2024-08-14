@@ -1,12 +1,19 @@
-import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
+import 'dart:convert';
+
+import 'package:flutter_kit/util/log_util.dart';
+
+import '../../config/constant_config.dart';
+import '../../database/shared_preferences.dart';
+import '../../model/user_info.dart';
 
 class UserControllerState {
-
-  RxInt userName = RxInt(0);
+  /// 当前登录用户信息
+  UserInfo userInfo = const UserInfo();
 
   UserControllerState() {
-    userName = 0.obs;
+    final token = SPStorage.getString(ConstantConfig.token);
+    if (token != null) {
+      userInfo = UserInfo.fromJson(jsonDecode(SPStorage.getString(ConstantConfig.userInfo)!));
+    }
   }
 }

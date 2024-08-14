@@ -36,27 +36,31 @@ class SPStorage {
         _sp.setStringList(key, value as List<String>);
         break;
     }
-
-    /// map 不能直接判断 Type 类型，他是一个 _InternalLinkedHashMap 是一个私有类型，没有办法引用出来
-    if (value is Map) {
-      // map 转成 json 格式的字符串进行保存，序列化成 json 字符串
-      _sp.setString(key, json.encode(value));
-      return;
-    }
   }
 
   /// 根据 key 读取数据
-  static Object? get<T>(String key) {
-    var value = _sp.get(key);
-    if (value is String) {
-      try {
-        // 反序列化，处理map，原样返回map回去。
-        return const JsonDecoder().convert(value) as Map<String, dynamic>;
-      } on FormatException catch (_) {
-        return value; // 返回字符串
-      }
-    }
-    return value;
+  static String? getString<T>(String key) {
+    return _sp.getString(key);
+  }
+
+  /// 根据 key 读取数据
+  static int? getInt<T>(String key) {
+    return _sp.getInt(key);
+  }
+
+  /// 根据 key 读取数据
+  static bool? getBool<T>(String key) {
+    return _sp.getBool(key);
+  }
+
+  /// 根据 key 读取数据
+  static double? getDouble<T>(String key) {
+    return _sp.getDouble(key);
+  }
+
+  /// 根据 key 读取数据
+  static List<String>? getStringList<T>(String key) {
+    return _sp.getStringList(key);
   }
 
   /// -------------其他方法封装-----------------

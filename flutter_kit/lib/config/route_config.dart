@@ -12,8 +12,6 @@ import '../page/search/search_view.dart';
 import '../page/tab/tab_binding.dart';
 import '../page/tab/tab_view.dart';
 
-
-
 class RouteConfig {
   static const String flash = "/flash";
   static const String login = "/login";
@@ -36,7 +34,7 @@ class RouteConfig {
     GetPage(
       name: tab,
       page: () => const TabPage(),
-      bindings: [TabBinding(), HomeBinding(), MineBinding()],
+      bindings: [HomeBinding(), MineBinding(), TabBinding()],
     ),
     GetPage(
       name: search,

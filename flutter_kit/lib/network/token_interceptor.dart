@@ -12,7 +12,7 @@ class TokenInterceptor extends InterceptorsWrapper {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     super.onRequest(options, handler);
-    _token ??= getCacheToken();
+    _token = SPStorage.getString(ConstantConfig.token);
     if (_token != null) {
       options.headers["token"] = _token;
     }
@@ -25,17 +25,5 @@ class TokenInterceptor extends InterceptorsWrapper {
     } else {
       options.headers["Accept-Language"] = "zh-CN";
     }
-  }
-
-  // 清除 token
-  clearCacheToken() {
-    _token = null;
-    SPStorage.remove(ConstantConfig.token);
-  }
-
-  // 获取授权 token
-  getCacheToken() {
-    _token = SPStorage.get(ConstantConfig.token).toString();
-    return _token;
   }
 }
