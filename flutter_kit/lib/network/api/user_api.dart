@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:flutter_kit/config/constant_config.dart';
 import 'package:flutter_kit/model/user_info.dart';
-import 'package:flutter_kit/util/log_util.dart';
 
 import '../network.dart';
 
