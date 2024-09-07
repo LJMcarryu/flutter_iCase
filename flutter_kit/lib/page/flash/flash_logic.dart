@@ -12,7 +12,7 @@ class FlashLogic extends GetxController {
 
   goLoginOrHome() {
     final token = SPStorage.getString(ConstantConfig.token);
-    Log.d(token);
+    Log.d("当前登录用户的token：$token");
     if (token == null) {
       Get.offNamed(RouteConfig.login);
     } else {
