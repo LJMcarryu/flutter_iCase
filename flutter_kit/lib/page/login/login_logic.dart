@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_kit/config/route_config.dart';
+import 'package:flutter_kit/controller/manager.dart';
 import 'package:get/get.dart';
 
 import '../../config/constant_config.dart';
@@ -20,7 +21,7 @@ class LoginLogic extends GetxController {
     if (userInfo.token != null) {
       SPStorage.set(ConstantConfig.userInfo, jsonEncode(userInfo));
       SPStorage.set(ConstantConfig.token, userInfo.token);
-      Get.find<UserControllerLogic>().setUserInfo(userInfo);
+      UserManager.logic.setUserInfo(userInfo);
       Get.offNamed(RouteConfig.tab);
     }
     EasyLoading.dismiss();

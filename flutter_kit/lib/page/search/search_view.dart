@@ -13,11 +13,8 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final SearchLogic logic = Get.find<SearchLogic>();
     final SearchState state = Get.find<SearchLogic>().state;
-    final UserControllerLogic userControllerLogic = Get.find();
-    final UserControllerState userControllerState = userControllerLogic.state;
 
-    return Scaffold(
-        body: Center(
-            child: Text(userControllerState.userInfo.nickName ?? "")));
+    return const Scaffold(
+        body:Center(child:Text('Search')));
   }
 }
