@@ -1,9 +1,7 @@
-import 'dart:convert';
 
 import 'package:flutter_kit/config/constant_config.dart';
 import 'package:flutter_kit/config/route_config.dart';
 import 'package:flutter_kit/database/shared_preferences.dart';
-import 'package:flutter_kit/model/user_info.dart';
 import 'package:flutter_kit/util/log_util.dart';
 import 'package:get/get.dart';
 
