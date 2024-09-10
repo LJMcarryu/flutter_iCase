@@ -27,25 +27,21 @@ class LoginPage extends StatelessWidget {
 
   Widget _buildLoginView(LoginLogic logic, LoginState state) {
     return Container(
-      width: double.infinity,
-      margin: EdgeInsets.only(top: 0.5.sh, left: 60.sp, right: 60.sp),
-      height: 40.sp,
-      child: ElevatedButton(
-        onPressed: () {
-          /// 调用登录接口
-          logic.login();
-        },
-        /// TODO: 这个方式太复杂，尝试用 InWell
-        style: ButtonStyle(
-          textStyle: WidgetStateProperty.all(TextStyle(fontSize: 18.sp)),
-          backgroundColor: WidgetStateProperty.all(Colors.blue),
-          foregroundColor: WidgetStateProperty.all(Colors.white),
-          elevation: WidgetStateProperty.all(1.sp),
-          shape: WidgetStateProperty.all(RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.sp))),
-        ),
-        child: Text('登 录', style: TextStyle(fontSize: 20.sp)),
-      ),
-    );
+        width: double.infinity,
+        margin: EdgeInsets.only(top: 0.5.sh, left: 60.sp, right: 60.sp),
+        height: 40.sp,
+        child: InkWell(
+          onTap: () {
+            /// 调用登录接口
+            logic.login();
+          },
+          child: Container(
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                color: Colors.blue, borderRadius: BorderRadius.circular(20.sp)),
+            child: Text('登 录',
+                style: TextStyle(fontSize: 20.sp, color: Colors.white)),
+          ),
+        ));
   }
 }

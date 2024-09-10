@@ -24,3 +24,14 @@ Future<UserInfo> userLogin(String username, String password) async {
     return const UserInfo();
   }
 }
+
+/// 用户登出
+Future<bool> userLogout() async {
+  try {
+    var response = await Network.apiDio.get(ConstantConfig.userLogout);
+    var data = WebRespBody(response.data);
+    return data.status == 200;
+  } catch (e) {
+    return false;
+  }
+}
