@@ -9,8 +9,4 @@ class UserControllerLogic extends GetxController {
   setUserInfo (UserInfo userInfo) {
     state.userInfo = userInfo;
   }
-
-  addStatus() {
-    state.status.value++;
-  }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kit/controller/user_controller/user_controller_logic.dart';
-import 'package:flutter_kit/controller/user_controller/user_controller_state.dart';
 import 'package:get/get.dart';
 
 import 'search_logic.dart';

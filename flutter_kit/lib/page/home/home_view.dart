@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_kit/config/route_config.dart';
+import 'package:flutter_kit/controller/manager.dart';
 import 'package:flutter_kit/controller/user_controller/user_controller_logic.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -20,9 +21,9 @@ class HomePage extends StatelessWidget {
         margin: EdgeInsets.only(top: 100.sp),
         child: InkWell(
           onTap: () {
-            Get.toNamed(RouteConfig.search);
+            logic.toSearchPage();
           },
-          child: Text(Get.find<UserControllerLogic>().state.userInfo.nickName ?? ""),
+          child: Text(UserManager.state.userInfo.nickName ?? ""),
         ),
       ),
     );

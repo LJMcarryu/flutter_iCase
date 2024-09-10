@@ -6,7 +6,6 @@ import 'package:flutter_kit/controller/manager.dart';
 import 'package:get/get.dart';
 
 import '../../config/constant_config.dart';
-import '../../controller/user_controller/user_controller_logic.dart';
 import '../../database/shared_preferences.dart';
 import '../../model/user_info.dart';
 import '../../network/api/user_api.dart';

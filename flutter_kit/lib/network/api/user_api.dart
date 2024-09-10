@@ -10,7 +10,6 @@ import '../network.dart';
 Future<UserInfo> userLogin(String username, String password) async {
   try {
     var digest = md5.convert(const Utf8Encoder().convert(password));
-    // 参数
     var query = {
       "username": username,
       "password": digest.toString(),
