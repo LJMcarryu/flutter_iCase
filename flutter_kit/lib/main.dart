@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_kit/config/theme_config.dart';
 import 'package:flutter_kit/controller/user_controller/user_controller_logic.dart';
 import 'package:flutter_kit/database/shared_preferences.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -35,7 +36,9 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           // title: 'flutter_kit',
-          // theme: ThemeData(primarySwatch: Colors.blue),
+          theme: appLightThemeData,
+          darkTheme: appDarkThemeData,
+          themeMode: Get.isDarkMode ? ThemeMode.dark: ThemeMode.light,
           initialRoute: RouteConfig.flash,
           getPages: RouteConfig.getPages,
           /// 此处是处理不使用 GetX 路由，也能很轻松回收各个页面的 GetXController

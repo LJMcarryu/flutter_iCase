@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
           onTap: () {
             logic.toSearchPage();
           },
-          child: Text(UserManager.state.userInfo.nickName ?? ""),
+          child: Text(UserManager.state.userInfo.nickName ?? "", style: Get.textTheme.headlineMedium,),
         ),
       ),
     );
