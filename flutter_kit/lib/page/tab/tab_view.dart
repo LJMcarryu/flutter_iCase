@@ -20,6 +20,8 @@ class TabPage extends StatelessWidget {
           )),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
+          /// 取消点击高亮与波纹
+          type: BottomNavigationBarType.fixed,
           currentIndex: state.index.value,
           onTap: (value) {
             logic.changeIndex(value);

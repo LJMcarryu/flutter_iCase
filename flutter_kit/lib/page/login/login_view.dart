@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        color: Colors.white,
+        color: Get.theme.scaffoldBackgroundColor,
         child: Column(
           children: [
             _buildLoginView(logic, state),
@@ -38,9 +38,9 @@ class LoginPage extends StatelessWidget {
           child: Container(
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: Colors.blue, borderRadius: BorderRadius.circular(20.sp)),
+                color: Get.theme.colorScheme.primary, borderRadius: BorderRadius.circular(20.sp)),
             child: Text('登 录',
-                style: TextStyle(fontSize: 20.sp, color: Colors.white)),
+                style: TextStyle(fontSize: 20.sp, color: Get.theme.colorScheme.onPrimary)),
           ),
         ));
   }

@@ -12,7 +12,7 @@ class FlashLogic extends GetxController {
   final FlashState state = FlashState();
 
   goLoginOrHome() {
-    Log.d("当前登录用户的token：${UserManager.state.token}");
+    Log.t("当前登录用户的token：${UserManager.state.token}");
     if (UserManager.state.token == null) {
       Get.offNamed(RouteConfig.login);
     } else {
