@@ -1,20 +1,18 @@
-//创建Dark ThemeData对象
-
 import 'package:flutter/material.dart';
-import 'package:flutter_kit/main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-//创建light ThemeData对象
 final ThemeData appLightThemeData = ThemeData(
   brightness: Brightness.light,
   primaryColor: Colors.white,
+  /// 主背景颜色
   scaffoldBackgroundColor: Colors.white,
   /// 取消点击高亮
   splashColor: Colors.transparent,
   /// 取消点击波纹
   highlightColor: Colors.transparent,
+  /// appBar的主题
   appBarTheme:
-      const AppBarTheme(iconTheme: IconThemeData(color: Colors.yellow)),
+      const AppBarTheme(iconTheme: IconThemeData(color: Colors.black)),
   colorScheme: const ColorScheme(
       brightness: Brightness.light,
       primary: Colors.blue,
@@ -23,7 +21,8 @@ final ThemeData appLightThemeData = ThemeData(
       onSecondary: Colors.white,
       error: Colors.red,
       onError: Colors.white,
-      surface: Colors.blue,
+      /// 目前影响 BottomNavigationBarItem
+      surface: Colors.white,
       onSurface: Colors.white),
   textTheme: TextTheme(
       displayLarge: TextStyle(color: Colors.black87, fontSize: 24.sp),

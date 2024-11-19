@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'search_logic.dart';
@@ -12,7 +13,13 @@ class SearchPage extends StatelessWidget {
     final SearchLogic logic = Get.find<SearchLogic>();
     final SearchState state = Get.find<SearchLogic>().state;
 
-    return const Scaffold(
-        body:Center(child:Text('Search')));
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "首页",
+            style: TextStyle(fontSize: 18.sp, color: Colors.black87),
+          ),
+        ),
+        body: const Center(child: Text('Search')));
   }
 }
