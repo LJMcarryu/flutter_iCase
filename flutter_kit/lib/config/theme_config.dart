@@ -17,7 +17,7 @@ final ThemeData appLightThemeData = ThemeData(
       brightness: Brightness.light,
       primary: Colors.blue,
       onPrimary: Colors.white,
-      secondary: Colors.lightBlue,
+      secondary: Colors.yellow,
       onSecondary: Colors.white,
       error: Colors.red,
       onError: Colors.white,

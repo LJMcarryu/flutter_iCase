@@ -7,7 +7,7 @@ import 'package:flutter_kit/model/user_info.dart';
 import '../network.dart';
 
 /// 用户登录
-Future<UserInfo> userLogin(String username, String password) async {
+Future<UserInfo?> userLogin(String username, String password) async {
   try {
     var digest = md5.convert(const Utf8Encoder().convert(password));
     var query = {
@@ -17,11 +17,15 @@ Future<UserInfo> userLogin(String username, String password) async {
     };
     var response =
         await Network.apiDio.post(ConstantConfig.userLogin, data: query);
-    var data = UserInfo.fromJson(WebRespBody(response.data).body);
-    return data;
+    var data = WebRespBody(response.data);
+    if (data.status != 0) {
+      return null;
+    } else {
+      var result = UserInfo.fromJson(data.body);
+      return result;
+    }
   } catch (e) {
-    /// TODO: 出错处理
-    return const UserInfo();
+    return null;
   }
 }
 

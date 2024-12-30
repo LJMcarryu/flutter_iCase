@@ -4,7 +4,7 @@ class ConstantConfig {
   /// url
   /// 用户登录
   static const String userLogin = "/icase/api/user/login";
-
+  /// 用户登出
   static const String userLogout = "/icase/api/user/logout";
 
   /// key

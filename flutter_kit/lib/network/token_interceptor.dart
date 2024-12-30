@@ -10,12 +10,12 @@ class TokenInterceptor extends InterceptorsWrapper {
       options.headers["token"] = UserManager.state.token;
     }
 
-    /// 获取设备当前区域设置
-    String? languageCode = Get.deviceLocale?.languageCode;
-    if (languageCode == "en") {
-      options.headers["Accept-Language"] = "en-US";
-    } else {
-      options.headers["Accept-Language"] = "zh-CN";
-    }
+    // /// 获取设备当前区域设置
+    // String? languageCode = Get.deviceLocale?.languageCode;
+    // if (languageCode == "en") {
+    //   options.headers["Accept-Language"] = "en-US";
+    // } else {
+    //   options.headers["Accept-Language"] = "zh-CN";
+    // }
   }
 }
