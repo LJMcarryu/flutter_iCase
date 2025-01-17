@@ -102,13 +102,13 @@ dependencies:
 #  flutter_animate:
 
   # 用于查找文件系统上的常用位置
-#  path_provider:
+  path_provider:
   # 该软件包允许您使用本机文件资源管理器选择单个或多个绝对文件路径，并支持扩展名过滤。
 #  file_picker:
   # 权限插件
   permission_handler:
   # 用于发现 Android 和 iOS 上的网络（WiFi 和移动/蜂窝）连接状态
-#  connectivity_plus:
+  connectivity_plus:
   # 提供有关设备（品牌、型号等）以及应用程序所运行的 Android 或 iOS 版本的详细信息
 #  device_info_plus:
   # 用于查询应用程序包信息的 Flutter 插件，例如 iOS 上的 CFBundleVersion 或 Android 上的 versionCode
@@ -168,7 +168,7 @@ dependencies:
 #  flutter_gen:
 
   # 无需额外努力即可将已构建的小部件转换为骨架加载器
-#  skeletonizer:
+  skeletonizer:
 
   # 让五彩缤纷的纸屑洒满整个屏幕
 #  confetti:

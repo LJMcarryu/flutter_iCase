@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../language/language.dart';
 import '../home/home_view.dart';
 import '../mine/mine_view.dart';
 import 'tab_logic.dart';
@@ -26,10 +27,10 @@ class TabPage extends StatelessWidget {
           onTap: (value) {
             logic.changeIndex(value);
           },
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: 'Home'),
+          items: [
+            BottomNavigationBarItem(icon: const Icon(Icons.dashboard), label: Language.home.tr),
             BottomNavigationBarItem(
-                icon: Icon(Icons.account_box_rounded), label: 'Mine'),
+                icon: const Icon(Icons.account_box_rounded), label: Language.mine.tr),
           ],
         ),
       ),

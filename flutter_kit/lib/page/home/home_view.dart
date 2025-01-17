@@ -3,6 +3,7 @@ import 'package:flutter_kit/controller/manager.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../language/language.dart';
 import 'home_logic.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,14 +17,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "首页",
+          Language.home.tr,
           style: TextStyle(fontSize: 18.sp,color: Colors.black87),
         ),
       ),
       body: Container(
         margin: EdgeInsets.only(top: 100.sp),
         child: InkWell(
-          onTap: () {
+          onTap: () async {
+            await BleManager.logic.startScan();
             logic.toSearchPage();
           },
           child: Text(

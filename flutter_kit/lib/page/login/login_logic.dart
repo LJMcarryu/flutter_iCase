@@ -18,14 +18,14 @@ class LoginLogic extends GetxController {
   login() async {
     EasyLoading.show();
     UserInfo? userInfo =
-        await userLogin('jmliu6@iflytek.com', 'iFlytek.iCase.');
+        await userLogin('jmliu6@iflytek.com', 'Xf123456');
     EasyLoading.dismiss();
     if (userInfo == null) {
-      Log.e("当前登录的用户userInfo为null");
+      LJMLog.e("当前登录的用户userInfo为null");
       return;
     }
     if (userInfo.token == null) {
-      Log.e("当前登录的用户token为null");
+      LJMLog.e("当前登录的用户token为null");
       return;
     }
     SPStorage.set(ConstantConfig.userInfo, jsonEncode(userInfo));

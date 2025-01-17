@@ -1,6 +1,6 @@
 import 'package:logger/logger.dart';
 
-class Log {
+class LJMLog {
   static final Logger _logger = Logger(
     printer:
         PrefixPrinter(PrettyPrinter(stackTraceBeginIndex: 1, methodCount: 2)),

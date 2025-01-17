@@ -8,6 +8,8 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/src/router_report.dart';
 
 import 'config/route_config.dart';
+import 'controller/ble_controller/ble_controller_logic.dart';
+import 'language/messages.dart';
 
 void main() async {
   /// 持久化存储初始化
@@ -15,6 +17,7 @@ void main() async {
   await SPStorage.getInstance();
   /// TODO：初始化全局变量管理类（后续可以放到Config统一初始化）
   Get.put(UserControllerLogic());
+  Get.put(BleControllerLogic());
 
   runApp(const MyApp());
 }
@@ -36,6 +39,9 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           // title: 'flutter_kit',
+          translations: Messages(),
+          locale: Get.deviceLocale,
+          fallbackLocale: const Locale("zh", "CN"),
           theme: appLightThemeData,
           darkTheme: appDarkThemeData,
           themeMode: Get.isDarkMode ? ThemeMode.dark: ThemeMode.light,
