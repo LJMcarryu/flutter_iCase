@@ -14,6 +14,7 @@ class UserInfo with _$UserInfo {
     int? isAlive,
     int? isExternal,
     int? needCard,
+    int? isChangedPassword,
   }) = _UserInfo;
 
   factory UserInfo.fromJson(Map<String, Object?> json) =>

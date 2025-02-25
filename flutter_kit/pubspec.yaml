@@ -9,28 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+
   cupertino_icons:
 
 # 状态管理
-# provider、GetX、flutter_bloc 三选一 https://docs.flutter.cn/community/tutorials/state-management-package-getx-provider-analysis
-#
-# GetX：是 Flutter 上的一个轻量且强大的解决方案：高性能的状态管理、智能的依赖注入和便捷的路由管理
-# GetX是一个强大的Flutter状态管理库，其最大的特点是提供了响应式编程的能力。这意味着当状态发生变化时，相关的UI组件会自动更新。GetX还提供了一站式解决方案，包括状态管理、导航、依赖注入和国际化等。此外，GetX非常灵活，你可以只使用你需要的功能，比如只使用状态管理而不使用路由管理。
-# 然而，GetX也有一些潜在的缺点。例如，它提供了许多抽象，这可能会隐藏Flutter框架的一些核心概念。此外，虽然GetX社区正在不断增长，但它还没有像Provider或Bloc那样广泛的接受度。如果你的项目不需要那么多功能，GetX可能会显得过于复杂。
-#
-# Provider：对 InheritedWidget 组件的上层封装，使其更易用，更易复用
-# Provider是Flutter官方推荐的状态管理解决方案之一。它通过共享数据模型（通常是ChangeNotifier或其子类）来管理状态。Provider的主要优点是简单易用，而且与Flutter的架构非常契合。你可以在任何widget中使用Provider来访问和修改状态。
-# 然而，Provider在处理非父子组件之间的状态共享时可能会遇到一些困难。为了解决这个问题，开发者通常需要借助其他工具，如EventBus、全局变量或单例。
-#
-# Bloc：Flutter Widgets 可轻松实现 BLoC（业务逻辑组件）设计模式。专为与 bloc 状态管理包一起使用而构建
-# Bloc是一个基于事件驱动的状态管理库。在Bloc中，状态的变化是通过触发事件并处理这些事件来实现的。这种模型类似于MVVM架构中的ViewModel。Bloc非常安全和高效，但是相对复杂，对于初学者来说可能需要一些时间来理解。
-# Bloc的主要优点是它提供了清晰的状态流和事件流，使得状态管理更加可预测和可测试。此外，Bloc还提供了丰富的中间件支持，可以用于处理如缓存、错误处理等任务。
-
 #  provider:
   get:
-#  flutter_bloc:
   # 一个反应式缓存和数据绑定框架
 #  riverpod:
 
@@ -177,11 +161,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints:
 
   # 用于数据类 / 联合体 / 模式匹配 / 克隆的代码生成器
@@ -189,10 +168,6 @@ dev_dependencies:
   freezed:
   json_serializable:
 
-# The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true

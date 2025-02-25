@@ -28,13 +28,10 @@ mixin _$UserInfo {
   int? get isAlive => throw _privateConstructorUsedError;
   int? get isExternal => throw _privateConstructorUsedError;
   int? get needCard => throw _privateConstructorUsedError;
+  int? get isChangedPassword => throw _privateConstructorUsedError;
 
-  /// Serializes this UserInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UserInfoCopyWith<UserInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,7 +49,8 @@ abstract class $UserInfoCopyWith<$Res> {
       int? expireTime,
       int? isAlive,
       int? isExternal,
-      int? needCard});
+      int? needCard,
+      int? isChangedPassword});
 }
 
 /// @nodoc
@@ -65,8 +63,6 @@ class _$UserInfoCopyWithImpl<$Res, $Val extends UserInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,6 +74,7 @@ class _$UserInfoCopyWithImpl<$Res, $Val extends UserInfo>
     Object? isAlive = freezed,
     Object? isExternal = freezed,
     Object? needCard = freezed,
+    Object? isChangedPassword = freezed,
   }) {
     return _then(_value.copyWith(
       token: freezed == token
@@ -112,6 +109,10 @@ class _$UserInfoCopyWithImpl<$Res, $Val extends UserInfo>
           ? _value.needCard
           : needCard // ignore: cast_nullable_to_non_nullable
               as int?,
+      isChangedPassword: freezed == isChangedPassword
+          ? _value.isChangedPassword
+          : isChangedPassword // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -132,7 +133,8 @@ abstract class _$$UserInfoImplCopyWith<$Res>
       int? expireTime,
       int? isAlive,
       int? isExternal,
-      int? needCard});
+      int? needCard,
+      int? isChangedPassword});
 }
 
 /// @nodoc
@@ -143,8 +145,6 @@ class __$$UserInfoImplCopyWithImpl<$Res>
       _$UserInfoImpl _value, $Res Function(_$UserInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,6 +156,7 @@ class __$$UserInfoImplCopyWithImpl<$Res>
     Object? isAlive = freezed,
     Object? isExternal = freezed,
     Object? needCard = freezed,
+    Object? isChangedPassword = freezed,
   }) {
     return _then(_$UserInfoImpl(
       token: freezed == token
@@ -190,6 +191,10 @@ class __$$UserInfoImplCopyWithImpl<$Res>
           ? _value.needCard
           : needCard // ignore: cast_nullable_to_non_nullable
               as int?,
+      isChangedPassword: freezed == isChangedPassword
+          ? _value.isChangedPassword
+          : isChangedPassword // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -205,7 +210,8 @@ class _$UserInfoImpl with DiagnosticableTreeMixin implements _UserInfo {
       this.expireTime,
       this.isAlive,
       this.isExternal,
-      this.needCard})
+      this.needCard,
+      this.isChangedPassword})
       : _deviceCodes = deviceCodes;
 
   factory _$UserInfoImpl.fromJson(Map<String, dynamic> json) =>
@@ -235,10 +241,12 @@ class _$UserInfoImpl with DiagnosticableTreeMixin implements _UserInfo {
   final int? isExternal;
   @override
   final int? needCard;
+  @override
+  final int? isChangedPassword;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UserInfo(token: $token, nickName: $nickName, deviceCodes: $deviceCodes, tenantId: $tenantId, expireTime: $expireTime, isAlive: $isAlive, isExternal: $isExternal, needCard: $needCard)';
+    return 'UserInfo(token: $token, nickName: $nickName, deviceCodes: $deviceCodes, tenantId: $tenantId, expireTime: $expireTime, isAlive: $isAlive, isExternal: $isExternal, needCard: $needCard, isChangedPassword: $isChangedPassword)';
   }
 
   @override
@@ -253,7 +261,8 @@ class _$UserInfoImpl with DiagnosticableTreeMixin implements _UserInfo {
       ..add(DiagnosticsProperty('expireTime', expireTime))
       ..add(DiagnosticsProperty('isAlive', isAlive))
       ..add(DiagnosticsProperty('isExternal', isExternal))
-      ..add(DiagnosticsProperty('needCard', needCard));
+      ..add(DiagnosticsProperty('needCard', needCard))
+      ..add(DiagnosticsProperty('isChangedPassword', isChangedPassword));
   }
 
   @override
@@ -274,10 +283,12 @@ class _$UserInfoImpl with DiagnosticableTreeMixin implements _UserInfo {
             (identical(other.isExternal, isExternal) ||
                 other.isExternal == isExternal) &&
             (identical(other.needCard, needCard) ||
-                other.needCard == needCard));
+                other.needCard == needCard) &&
+            (identical(other.isChangedPassword, isChangedPassword) ||
+                other.isChangedPassword == isChangedPassword));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -288,11 +299,10 @@ class _$UserInfoImpl with DiagnosticableTreeMixin implements _UserInfo {
       expireTime,
       isAlive,
       isExternal,
-      needCard);
+      needCard,
+      isChangedPassword);
 
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UserInfoImplCopyWith<_$UserInfoImpl> get copyWith =>
@@ -315,7 +325,8 @@ abstract class _UserInfo implements UserInfo {
       final int? expireTime,
       final int? isAlive,
       final int? isExternal,
-      final int? needCard}) = _$UserInfoImpl;
+      final int? needCard,
+      final int? isChangedPassword}) = _$UserInfoImpl;
 
   factory _UserInfo.fromJson(Map<String, dynamic> json) =
       _$UserInfoImpl.fromJson;
@@ -336,11 +347,10 @@ abstract class _UserInfo implements UserInfo {
   int? get isExternal;
   @override
   int? get needCard;
-
-  /// Create a copy of UserInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  int? get isChangedPassword;
+  @override
+  @JsonKey(ignore: true)
   _$$UserInfoImplCopyWith<_$UserInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -212,15 +212,6 @@ class BleControllerLogic extends GetxController {
     }
   }
 
-  bool _isValidJson(String jsonString) {
-    try {
-      json.decode(jsonString);
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-
   _write(dynamic data) async {
     String jsonString = "${jsonEncode(data)}\u{0000}";
     List<int> jsonData = List<int>.from(utf8.encode(jsonString));

@@ -45,6 +45,24 @@ class SearchPage extends StatelessWidget {
             ),
             InkWell(
               onTap: () async {
+                await BleManager.logic.getConfigInfo((string) {
+                });
+              },
+              child: Container(
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.only(left: 15.sp),
+                height: 40.sp,
+                child: Text(
+                  "获取配置信息",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    color: const Color(0xFF242F57),
+                  ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () async {
                 await BleManager.logic.getFileList((string) {
                 });
               },

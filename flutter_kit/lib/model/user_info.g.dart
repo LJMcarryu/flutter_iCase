@@ -18,6 +18,7 @@ _$UserInfoImpl _$$UserInfoImplFromJson(Map<String, dynamic> json) =>
       isAlive: (json['isAlive'] as num?)?.toInt(),
       isExternal: (json['isExternal'] as num?)?.toInt(),
       needCard: (json['needCard'] as num?)?.toInt(),
+      isChangedPassword: (json['isChangedPassword'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$UserInfoImplToJson(_$UserInfoImpl instance) =>
@@ -30,4 +31,5 @@ Map<String, dynamic> _$$UserInfoImplToJson(_$UserInfoImpl instance) =>
       'isAlive': instance.isAlive,
       'isExternal': instance.isExternal,
       'needCard': instance.needCard,
+      'isChangedPassword': instance.isChangedPassword,
     };
